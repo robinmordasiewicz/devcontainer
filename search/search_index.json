@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"separator":"[\\s\\u200b\\-_,:!=\\[\\]()\"`/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z][a-z])","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"DevContainer","text":"<p>This is a sample page.</p>"},{"location":"concepts/","title":"Blog","text":""}]}
