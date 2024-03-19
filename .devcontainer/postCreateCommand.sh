@@ -23,6 +23,7 @@ oh-my-posh font install Meslo
 wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/powerlevel10k.omp.json -O ~/.oh-my-posh/themes/powerlevel10k.omp.json
 # shellcheck disable=SC2016
 echo 'eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/themes/powerlevel10k.omp.json)"' >>~/.zshrc
+# shellcheck disable=SC2016
 echo 'eval "$(oh-my-posh init bash --config ~/.oh-my-posh/themes/powerlevel10k.omp.json)"' >>~/.bashrc
 if ! [ -f ~/.z ]; then
 	wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/.z
@@ -86,7 +87,7 @@ sed -i "s,GITHUBPAGESURL,${GITHUBPAGESURL},g" "mkdocs.yml"
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 ARCH=$(dpkg-architecture -q DEB_BUILD_ARCH)
 if [ "${ARCH}" == "amd64" ]; then
-  ARCH="32-bit"
+	ARCH="32-bit"
 fi
 wget https://github.com/jesseduffield/lazygit/releases/download/v"${LAZYGIT_VERSION}"/lazygit_"${LAZYGIT_VERSION}"_Linux_"${ARCH}".tar.gz -O lazygit.tar.gz
 tar xf lazygit.tar.gz lazygit
