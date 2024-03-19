@@ -117,4 +117,4 @@ yes y | conda update -n base -c conda-forge conda --repodata-fn=repodata.json
 # shellcheck disable=SC1091
 source /opt/conda/etc/profile.d/conda.sh
 
-cd "${REPODIR}" && conda env create -f ./devcontainer/mkdocs-environment.yml
+cd "${REPODIR}" && conda env create -f ./.devcontainer/mkdocs-environment.yml
