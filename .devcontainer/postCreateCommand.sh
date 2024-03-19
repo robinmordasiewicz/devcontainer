@@ -23,6 +23,7 @@ oh-my-posh font install Meslo
 wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/powerlevel10k.omp.json -O ~/.oh-my-posh/themes/powerlevel10k.omp.json
 # shellcheck disable=SC2016
 echo 'eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/themes/powerlevel10k.omp.json)"' >>~/.zshrc
+echo 'eval "$(oh-my-posh init bash --config ~/.oh-my-posh/themes/powerlevel10k.omp.json)"' >>~/.bashrc
 if ! [ -f ~/.z ]; then
 	wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/.z
 fi

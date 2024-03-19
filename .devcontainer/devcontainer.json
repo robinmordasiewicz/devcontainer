@@ -89,7 +89,8 @@
         "autoconf",
         "tesseract-ocr",
         "ubuntu-drivers-common",
-        "nodejs"
+        "nodejs",
+        "bash-completion"
       ]
     },
     "ghcr.io/devcontainers-contrib/features/black:2": {},
