@@ -21,7 +21,7 @@ su -l vscode -c "mkdir -p /home/vscode/.tmux/plugins"
 su -l vscode -c "git clone https://github.com/tmux-plugins/tpm /home/vscode/.tmux/plugins/tpm"
 
 su -l vscode -c "mkdir -p /home/vscode/.config/powershell"
-su -l vscode -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/powerlevel10k.omp.json -O /home/vscode/.config/powershell/Microsoft.PowerShell_profile.ps1"
+su -l vscode -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1 -O /home/vscode/.config/powershell/Microsoft.PowerShell_profile.ps1"
 
 su -l vscode -c "echo 'OCO_AI_PROVIDER=ollama' >/home/vscode/.opencommit"
 
