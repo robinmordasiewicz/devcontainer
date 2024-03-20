@@ -24,3 +24,11 @@ su -l vscode -c "mkdir -p /home/vscode/.config/powershell"
 su -l vscode -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/powerlevel10k.omp.json -O /home/vscode/.config/powershell/Microsoft.PowerShell_profile.ps1"
 
 su -l vscode -c "echo 'OCO_AI_PROVIDER=ollama' >/home/vscode/.opencommit"
+
+WORKINGDIR=$(pwd)
+
+DOWNLOADLOCATION=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq -r '.assets[] | select(.name=="Meslo.zip").browser_download_url')
+wget ${DOWNLOADLOCATION} -O fonts.zip
+su -l vscode -c "mkdir -p /home/vscode/.local/share/fonts"
+su -l vscode -c "unzip ${WORKINGDIR}/fonts.zip -d /home/vscode/.local/share/fonts/"
+su -l vscode -c "fc-cache /home/vscode/.local/share/fonts"
