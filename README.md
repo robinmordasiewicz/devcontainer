@@ -62,6 +62,16 @@ sudo npm install -g @devcontainer/cli
 
 ### Authenticate to your container registry github/docker/azure
 
+On Linux x86_64
+
 ```bash
-devcontainer build --workspace-folder . --push true --image-name docker.io/robinmordasiewicz/devcontainer:latest
+sudo devcontainer build --workspace-folder . --image-name docker.io/robinmordasiewicz/devcontainer-amd64:latest
+docker image push robinmordasiewicz/devcontainer-amd64
+```
+
+On Mac arm64
+
+```bash
+sudo devcontainer build --workspace-folder . --image-name docker.io/robinmordasiewicz/devcontainer-arm64:latest
+docker image push robinmordasiewicz/devcontainer-arm64
 ```
