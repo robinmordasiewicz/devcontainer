@@ -6,6 +6,7 @@
       "extensions": [
         "esbenp.prettier-vscode",
         "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
         "HashiCorp.terraform",
         "msazurermtools.azurerm-vscode-tools",
         "ms-azuretools.vscode-docker",
