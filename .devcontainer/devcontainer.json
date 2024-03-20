@@ -128,9 +128,15 @@
     "ghcr.io/rchaganti/vsc-devcontainer-features/azurebicep:1": {},
     "ghcr.io/rocker-org/devcontainer-features/miniforge:1": {},
     "ghcr.io/stuartleeks/dev-container-features/azure-cli-persistence:0": {},
-    "ghcr.io/warrenbuckley/codespace-features/sqlite:1": {}
+    "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:1": {},
+    "ghcr.io/wxw-matt/devcontainer-features/cudommand_runner:latest": {
+      "command1": "wget https://raw.githubusercontent.com/robinmordasiewicz/devcontainer/main/.devcontainer/install.sh -O /tmp/install.sh",
+      "command2": "chmod 755 /tmp/install.sh",
+      "command3": "/tmp/install.sh"
+    }
   },
-  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && ./.devcontainer/postCreateCommand.sh",
+  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "postStartCommand": "./.devcontainer/postStartCommand.sh",
   "appPort": ["8081:8081"],
   "containerEnv": {},
