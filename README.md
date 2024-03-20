@@ -65,13 +65,13 @@ sudo npm install -g @devcontainer/cli
 On Linux x86_64
 
 ```bash
-sudo devcontainer build --workspace-folder . --image-name docker.io/robinmordasiewicz/devcontainer-amd64:latest
-docker image push robinmordasiewicz/devcontainer-amd64
+sudo devcontainer build --workspace-folder . --platform linux/amd64 --image-name docker.io/robinmordasiewicz/devcontainer:latest
+docker image push robinmordasiewicz/devcontainer:latest
 ```
 
 On Mac arm64
 
 ```bash
-sudo devcontainer build --workspace-folder . --image-name docker.io/robinmordasiewicz/devcontainer-arm64:latest
-docker image push robinmordasiewicz/devcontainer-arm64
+devcontainer build --workspace-folder . --platform darwin/amd64 --image-name docker.io/robinmordasiewicz/devcontainer:latest
+docker image push robinmordasiewicz/devcontainer:latest
 ```
