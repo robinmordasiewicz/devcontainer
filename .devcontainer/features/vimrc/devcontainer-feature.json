@@ -1,0 +1,11 @@
+{
+    "name": "vim customization",
+    "id": "vimrc",
+    "version": "0.0.1",
+    "description": "Install vimrc customizations",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers-contrib/features/wget-apt-get",
+        "ghcr.io/guiyomh/features/vim"
+    ]
+}

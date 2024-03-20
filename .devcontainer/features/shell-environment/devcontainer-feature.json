@@ -1,0 +1,15 @@
+{
+    "name": "Custom Shell Environment",
+    "id": "shell-environment",
+    "version": "0.0.1",
+    "description": "Install shell shell rc files.",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers-contrib/features/wget-apt-get",
+        "ghcr.io/devcontainers-contrib/features/zsh-plugins",
+        "ghcr.io/devcontainers/features/powershell",
+        "ghcr.io/devcontainers-contrib/features/tmux-apt-get",
+        "./features/setup",
+        "./features/lsd"
+    ]
+}

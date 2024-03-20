@@ -1,0 +1,11 @@
+{
+    "name": "Update Conda",
+    "id": "update-conda",
+    "version": "0.0.1",
+    "description": "Update Conda and initialize shell",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/rocker-org/devcontainer-features/miniforge",
+        "./features/shell-environment"
+    ]
+}

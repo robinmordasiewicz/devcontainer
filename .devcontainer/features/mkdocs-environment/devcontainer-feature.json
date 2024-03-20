@@ -1,0 +1,11 @@
+{
+    "name": "MkDocs Python Environment",
+    "id": "mkdocs-environment",
+    "version": "0.0.1",
+    "description": "Create the python environment for mkdocs serve and compiling",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/rocker-org/devcontainer-features/miniforge",
+        "./features/update-conda"
+    ]
+}

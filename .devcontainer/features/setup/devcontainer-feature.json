@@ -1,0 +1,9 @@
+{
+    "name": "OS level customization",
+    "id": "setup",
+    "version": "0.0.1",
+    "description": "Customize the operating system.",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
