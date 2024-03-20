@@ -53,3 +53,15 @@ to free up space run
 ```bash
 docker system prune -a -f
 ```
+
+## Prebuild
+
+```bash
+sudo npm install -g @devcontainer/cli
+```
+
+### Authenticate to your container registry github/docker/azure
+
+```bash
+devcontainer build --workspace-folder . --push true --image-name docker.io/robinmordasiewicz/devcontainer:latest
+```
