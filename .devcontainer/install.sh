@@ -73,10 +73,6 @@ fi
 
 wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/.vimrc -O /home/vscode/.vimrc
 
-if ! [ -f mkdocs.yml ]; then
-	cp .devcontainer/mkdocs.template mkdocs.yml
-fi
-
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 ARCH=$(dpkg-architecture -q DEB_BUILD_ARCH)
 if [ "${ARCH}" == "amd64" ]; then
@@ -102,7 +98,4 @@ source /opt/conda/etc/profile.d/conda.sh
 wget https://raw.githubusercontent.com/robinmordasiewicz/devcontainer/main/.devcontainer/mkdocs-environment.yml /tmp/mkdocs-environment.yml
 conda env create -f /tmp/mkdocs-environment.yml
 
-chown -R vscode:vscode /home/vscode/
-chown -R vscode:vscode /dc
-chown -R vscode:conda /opt/conda
 
