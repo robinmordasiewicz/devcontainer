@@ -141,7 +141,7 @@
     "./features/vimrc": {}
   },
   "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
-  "postStartCommand": "./.devcontainer/postStartCommand.sh",
+  "postStartCommand": "echo '' >/tmp/mkdocs.tmp && . /opt/conda/etc/profile.d/conda.sh && /opt/conda/bin/conda activate mkdocs && nohup bash -c 'mkdocs serve&' >/tmp/mkdocs.tmp",
   "containerUser": "vscode",
   "appPort": ["8081:8081"]
 }

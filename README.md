@@ -60,6 +60,12 @@ docker system prune -a -f
 sudo npm install -g @devcontainer/cli
 ```
 
+## Attach to running container
+
+```bash
+devcontainer exec --workspace-folder ./ /usr/bin/zsh
+```
+
 ### Authenticate to your container registry github/docker/azure
 
 On Linux x86_64
