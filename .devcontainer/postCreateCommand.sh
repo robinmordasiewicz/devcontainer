@@ -34,6 +34,16 @@ conda config --set changeps1 False
 
 wget https://raw.githubusercontent.com/Azure/azure-cli/dev/az.completion -O ~/.oh-my-zsh/custom/az.zsh
 
+wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/.tmux.conf -O ~/.tmux.conf
+if ! [ -d ~/.tmux/plugins ]; then
+  mkdir -p ~/.tmux/plugins
+fi
+if ! [ -d ~/.tmux/plugins/tpm ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+else
+  cd ~/.tmux/plugins/tpm && git pull
+fi
+
 tfenv install
 tfenv use
 

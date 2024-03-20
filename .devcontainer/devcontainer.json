@@ -39,6 +39,10 @@
           },
           "pwsh": {
             "path": "/opt/microsoft/powershell/7/pwsh"
+          },
+          "tmux": {
+            "path": "/usr/bin/tmux",
+            "args": ["new-session", "-A", "-s", "vscode:${workspaceFolder}"]
           }
         },
         "terminal.integrated.defaultProfile.linux": "zsh",
