@@ -8,5 +8,6 @@
         "ghcr.io/rocker-org/devcontainer-features/miniforge",
         "./features/update-conda"
     ],
-    "postStartCommand": ". /opt/conda/etc/profile.d/conda.sh && eval \"\$(conda shell.bash hook)\" >/dev/null 2>&1 && conda activate mkdocs && nohup bash -c 'mkdocs serve&' >/tmp/mkdocs.tmp"
+    "postStartCommand": ". /opt/conda/etc/profile.d/conda.sh && eval \"\$(conda shell.bash hook)\" >/dev/null 2>&1 && conda activate mkdocs && nohup bash -c 'mkdocs serve --dev-addr 0.0.0.0:8081 &' >/tmp/mkdocs.tmp",
+    "appPort": ["8081:8081"]
 }

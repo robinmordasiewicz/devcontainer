@@ -138,6 +138,5 @@
     "./features/vimrc": {}
   },
   "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
-  "containerUser": "vscode",
-  "appPort": ["8081:8081"]
+  "containerUser": "vscode"
 }
