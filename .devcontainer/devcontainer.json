@@ -102,6 +102,7 @@
     "ghcr.io/devcontainers-contrib/features/pylint:2": {},
     "ghcr.io/devcontainers-contrib/features/qrcode:2": {},
     "ghcr.io/devcontainers-contrib/features/terraform-docs:1": {},
+    "ghcr.io/devcontainers-contrib/features/terragrunt:1": {},
     "ghcr.io/devcontainers-contrib/features/tmux-apt-get:1": {},
     "ghcr.io/devcontainers-contrib/features/vscode-cli:1": {},
     "ghcr.io/devcontainers-contrib/features/vscode-server:1": {},
