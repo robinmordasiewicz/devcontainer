@@ -5,6 +5,7 @@
     "description": "Install Terraform Environment manager and install the latest version of terraform",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/mickeahlinder/devcontainer-features/tfenv",
         "./features/shell-environment"
     ]
 }

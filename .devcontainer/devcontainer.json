@@ -72,10 +72,6 @@
       "installTools": true,
       "version": "3.11"
     },
-    "ghcr.io/devcontainers/features/terraform:1": {
-      "installTFsec": true,
-      "installTerraformDocs": true
-    },
     "ghcr.io/devcontainers-contrib/features/act:1": {},
     "ghcr.io/devcontainers-contrib/features/actionlint:1": {},
     "ghcr.io/devcontainers-contrib/features/ansible:2": {},
@@ -105,6 +101,7 @@
     "ghcr.io/devcontainers-contrib/features/poppler-utils-apt-get:1": {},
     "ghcr.io/devcontainers-contrib/features/pylint:2": {},
     "ghcr.io/devcontainers-contrib/features/qrcode:2": {},
+    "ghcr.io/devcontainers-contrib/features/terraform-docs:1": {},
     "ghcr.io/devcontainers-contrib/features/tmux-apt-get:1": {},
     "ghcr.io/devcontainers-contrib/features/vscode-cli:1": {},
     "ghcr.io/devcontainers-contrib/features/vscode-server:1": {},
@@ -116,13 +113,16 @@
       "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions.git https://github.com/zsh-users/zsh-syntax-highlighting.git https://github.com/conda-incubator/conda-zsh-completion.git https://github.com/z-shell/zsh-eza.git https://github.com/cda0/zsh-tfenv.git https://github.com/yuhonas/zsh-aliases-lsd.git"
     },
     "ghcr.io/devcontainers-community/npm-features/prettier:1": {},
+    "ghcr.io/dhoeric/features/tfsec:1": {},
     "ghcr.io/guiyomh/features/vim:0": {},
     "ghcr.io/hwaien/devcontainer-features/match-host-time-zone": {},
     "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
     "ghcr.io/jsburckhardt/devcontainer-features/gitleaks:1": {},
     "ghcr.io/jungaretti/features/make:1": {},
     "ghcr.io/lukewiwa/features/shellcheck:0": {},
+    "ghcr.io/mickeahlinder/devcontainer-features/tfenv:1": {},
     "ghcr.io/prulloac/devcontainer-features/pre-commit:1": {},
+    "ghcr.io/prulloac/devcontainer-features/gitlint:1": {},
     "ghcr.io/rchaganti/vsc-devcontainer-features/azurebicep:1": {},
     "ghcr.io/rocker-org/devcontainer-features/miniforge:1": {},
     "ghcr.io/stuartleeks/dev-container-features/azure-cli-persistence:0": {},
@@ -137,7 +137,7 @@
     "./features/update-conda": {},
     "./features/vimrc": {}
   },
-  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && sudo chown -R vscode:vscode /home/vscode",
   "runArgs": ["--name", "${localEnv:USER}_devcontainer"],
   "containerUser": "vscode"
 }
