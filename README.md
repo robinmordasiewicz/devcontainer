@@ -24,7 +24,10 @@ http://127.0.0.1:8000
 
 ## Terraform
 
-tfenv install latest
+```bash
+tfenv install
+tfenv use
+```
 
 ## Github CLI
 
@@ -48,16 +51,10 @@ tell application "Ollama" to run
 
 ## Troubleshooting docker
 
-to free up space run
+Clearing the cache sometimes helps with extensions not loading.
 
 ```bash
 docker system prune -a -f
-```
-
-## Prebuild
-
-```bash
-sudo npm install -g @devcontainer/cli
 ```
 
 ## Attach to running container
@@ -65,26 +62,41 @@ sudo npm install -g @devcontainer/cli
 ```bash
 devcontainer exec --workspace-folder ./ /usr/bin/zsh
 ```
+## Run a container from the cli
 
-### Authenticate to your container registry github/docker/azure
+```bash
+devcontainer up --workspace-folder ./
+```
+
+## Prebuild
+
+```bash
+sudo npm install -g @devcontainers/cli
+```
+
+### Linux
+
+docker run --privileged --rm tonistiigi/binfmt --install all
 
 https://docs.docker.com/storage/containerd/
 docker info -f '{{ .DriverStatus }}'
 
-On Linux x86_64
-
-```bash
-sudo devcontainer build --workspace-folder . --platform linux/amd64 --image-name docker.io/robinmordasiewicz/devcontainer:latest
-docker image push robinmordasiewicz/devcontainer:latest
-```
-
-On Mac arm64
+### Mac
 
 Disable the flag Use containerd for pulling and storing images within the feature of Docker Desktop to solve it.
 Disable Rosetta
 You find the setting Use containerd for pulling and storing images in Docker Desktop, "Settings" > "Features in development"
 
+[Docker Desktop Mac](./docs/images/docker-desktop-settings.png)
+
 ```bash
-devcontainer build --workspace-folder . --platform darwin/arm64 --image-name docker.io/robinmordasiewicz/devcontainer:latest
-docker image push robinmordasiewicz/devcontainer:latest
+devcontainer build --workspace-folder . --platform linux/arm64,linux/amd64 --image-name docker.io/robinmordasiewicz/devcontainer:latest --output type=docker
 ```
+
+### Authenticate to your container registry github/docker/azure and push the image
+
+```bash
+docker login
+docker push --all-tags robinmordasiewicz/devcontainer:latest
+```
+

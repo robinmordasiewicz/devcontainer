@@ -1,0 +1,12 @@
+bash-language-server
+dockerfile-language-server-nodejs
+gatsby-cli
+javascript-typescript-langserver
+jsonlint
+opencommit
+sql-language-server
+unified-language-server
+vscode-css-languageserver-bin
+vscode-html-languageserver-bin
+vscode-json-languageserver-bin
+yaml-language-server

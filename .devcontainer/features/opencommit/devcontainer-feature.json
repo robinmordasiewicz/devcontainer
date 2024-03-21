@@ -1,0 +1,14 @@
+{
+  "name": "opencommit",
+  "id": "opencommit",
+  "version": "0.0.1",
+  "description": "opencommit using ollama",
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/rocker-org/devcontainer-features/miniforge",
+    "./features/update-conda"
+  ],
+  "containerEnv": {
+    "OCO_AI_PROVIDER": "ollama"
+  }
+}
