@@ -68,6 +68,9 @@ devcontainer exec --workspace-folder ./ /usr/bin/zsh
 
 ### Authenticate to your container registry github/docker/azure
 
+https://docs.docker.com/storage/containerd/
+docker info -f '{{ .DriverStatus }}'
+
 On Linux x86_64
 
 ```bash
