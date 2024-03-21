@@ -33,5 +33,3 @@ su -l vscode -c "mkdir -p /home/vscode/.local/share/fonts"
 su -l vscode -c "unzip ${WORKINGDIR}/fonts.zip -d /home/vscode/.local/share/fonts/"
 su -l vscode -c "fc-cache /home/vscode/.local/share/fonts"
 
-su -l vscode -c "yes y | az config set auto-upgrade.enable=yes"
-su -l vscode -c "yes y | az config set auto-upgrade.prompt=no"
