@@ -13,5 +13,6 @@
         "ghcr.io/devcontainers-contrib/features/tmux-apt-get",
         "./features/setup",
         "./features/lsd"
-    ]
+    ],
+    "postStartCommand": 'su -l vscode -c "yes y | az config set auto-upgrade.enable=yes" && su -l vscode -c "yes y | az config set auto-upgrade.prompt=no"'
 }
