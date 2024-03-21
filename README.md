@@ -77,7 +77,11 @@ docker image push robinmordasiewicz/devcontainer:latest
 
 On Mac arm64
 
+Disable the flag Use containerd for pulling and storing images within the feature of Docker Desktop to solve it.
+Disable Rosetta
+You find the setting Use containerd for pulling and storing images in Docker Desktop, "Settings" > "Features in development"
+
 ```bash
-devcontainer build --workspace-folder . --platform darwin/amd64 --image-name docker.io/robinmordasiewicz/devcontainer:latest
+devcontainer build --workspace-folder . --platform darwin/arm64 --image-name docker.io/robinmordasiewicz/devcontainer:latest
 docker image push robinmordasiewicz/devcontainer:latest
 ```
