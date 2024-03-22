@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Activating feature 'Shell Environments'"
+chown -R $_REMOTE_USER:$_REMOTE_USER $_REMOTE_USER_HOME
 
 su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.local/bin"
 su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.oh-my-posh/themes"
@@ -32,4 +32,5 @@ wget ${DOWNLOADLOCATION} -O fonts.zip
 su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.local/share/fonts"
 su -l $_REMOTE_USER -c "unzip ${WORKINGDIR}/fonts.zip -d $_REMOTE_USER_HOME/.local/share/fonts/"
 su -l $_REMOTE_USER -c "fc-cache $_REMOTE_USER_HOME/.local/share/fonts"
+chown -R $_REMOTE_USER:$_REMOTE_USER $_REMOTE_USER_HOME
 

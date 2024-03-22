@@ -1,7 +1,7 @@
 {
     "name": "Custom Shell Environment",
     "id": "shell-environment",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Install shell shell rc files.",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
