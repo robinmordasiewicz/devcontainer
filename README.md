@@ -90,13 +90,13 @@ You find the setting Use containerd for pulling and storing images in Docker Des
 [Docker Desktop Mac](./docs/images/docker-desktop-settings.png)
 
 ```bash
-devcontainer build --workspace-folder . --platform linux/arm64,linux/amd64 --image-name docker.io/robinmordasiewicz/devcontainer:latest --output type=docker --no-cache
+devcontainer build --workspace-folder . --platform linux/arm64,linux/amd64 --image-name docker.io/robinmordasiewicz/devcontainer:latest --output type=docker --no-cache false
 ```
 
 ### Authenticate to your container registry github/docker/azure and push the image
 
 ```bash
 docker login
-docker push --all-tags robinmordasiewicz/devcontainer:latest
+docker push robinmordasiewicz/devcontainer:latest
 ```
 
