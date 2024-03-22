@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-chown -R $_REMOTE_USER:$_REMOTE_USER $_REMOTE_USER_HOME
-
 su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.local/bin"
 su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.oh-my-posh/themes"
 
