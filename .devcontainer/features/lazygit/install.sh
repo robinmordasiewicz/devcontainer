@@ -1,11 +1,8 @@
 #!/bin/bash
 set -e
 
-echo "Activating feature 'lazygit'"
-
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 ARCHTYPE=$(dpkg-architecture -q DEB_BUILD_ARCH)
-echo "Architecture is ${ARCHTYPE}"
 
 if [[ "${ARCHTYPE}" == "amd64" ]]; then
 	ARCHTYPE="x86_64"

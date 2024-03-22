@@ -3,7 +3,7 @@ set -e
 
 echo "Activating feature 'setup'"
 
-echo "vscode ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/vscode
+echo "$_REMOTE_USER ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$_REMOTE_USER
 
 npm install -g npm@latest
 npm install -g opencommit

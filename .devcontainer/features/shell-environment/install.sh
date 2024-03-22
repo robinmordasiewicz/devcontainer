@@ -3,33 +3,33 @@ set -e
 
 echo "Activating feature 'Shell Environments'"
 
-su -l vscode -c "mkdir -p /home/vscode/.local/bin"
-su -l vscode -c "mkdir -p /home/vscode/.oh-my-posh/themes"
+su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.local/bin"
+su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.oh-my-posh/themes"
 
-su -l vscode -c "curl -s https://ohmyposh.dev/install.sh | bash -s -- -d /home/vscode/.local/bin -t /home/vscode/.oh-my-posh/themes"
-#su -l vscode -c "/home/vscode/.local/bin/oh-my-posh font install Meslo"
-su -l vscode -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/powerlevel10k.omp.json -O /home/vscode/.oh-my-posh/themes/powerlevel10k.omp.json"
+su -l $_REMOTE_USER -c "curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $_REMOTE_USER_HOME/.local/bin -t $_REMOTE_USER_HOME/.oh-my-posh/themes"
+#su -l $_REMOTE_USER -c "$_REMOTE_USER_HOME/.local/bin/oh-my-posh font install Meslo"
+su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/powerlevel10k.omp.json -O $_REMOTE_USER_HOME/.oh-my-posh/themes/powerlevel10k.omp.json"
 # shellcheck disable=SC2016
-su -l vscode -c "echo 'eval \"\$(oh-my-posh init zsh --config ~/.oh-my-posh/themes/powerlevel10k.omp.json)\"' >> /home/vscode/.zshrc"
+su -l $_REMOTE_USER -c "echo 'eval \"\$(oh-my-posh init zsh --config ~/.oh-my-posh/themes/powerlevel10k.omp.json)\"' >> $_REMOTE_USER_HOME/.zshrc"
 # shellcheck disable=SC2016
-su -l vscode -c "echo 'eval \"\$(oh-my-posh init bash --config ~/.oh-my-posh/themes/powerlevel10k.omp.json)\"' >> /home/vscode/.bashrc"
+su -l $_REMOTE_USER -c "echo 'eval \"\$(oh-my-posh init bash --config ~/.oh-my-posh/themes/powerlevel10k.omp.json)\"' >> $_REMOTE_USER_HOME/.bashrc"
 
-su -l vscode -c "wget https://raw.githubusercontent.com/Azure/azure-cli/dev/az.completion -O /home/vscode/.oh-my-zsh/custom/az.zsh"
+su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/Azure/azure-cli/dev/az.completion -O $_REMOTE_USER_HOME/.oh-my-zsh/custom/az.zsh"
 
-su -l vscode -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/.tmux.conf -O /home/vscode/.tmux.conf"
-su -l vscode -c "mkdir -p /home/vscode/.tmux/plugins"
-su -l vscode -c "git clone https://github.com/tmux-plugins/tpm /home/vscode/.tmux/plugins/tpm"
+su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/.tmux.conf -O $_REMOTE_USER_HOME/.tmux.conf"
+su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.tmux/plugins"
+su -l $_REMOTE_USER -c "git clone https://github.com/tmux-plugins/tpm $_REMOTE_USER_HOME/.tmux/plugins/tpm"
 
-su -l vscode -c "mkdir -p /home/vscode/.config/powershell"
-su -l vscode -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1 -O /home/vscode/.config/powershell/Microsoft.PowerShell_profile.ps1"
+su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.config/powershell"
+su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1 -O $_REMOTE_USER_HOME/.config/powershell/Microsoft.PowerShell_profile.ps1"
 
-su -l vscode -c "echo 'OCO_AI_PROVIDER=ollama' >/home/vscode/.opencommit"
+su -l $_REMOTE_USER -c "echo 'OCO_AI_PROVIDER=ollama' >$_REMOTE_USER_HOME/.opencommit"
 
 WORKINGDIR=$(pwd)
 
 DOWNLOADLOCATION=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq -r '.assets[] | select(.name=="Meslo.zip").browser_download_url')
 wget ${DOWNLOADLOCATION} -O fonts.zip
-su -l vscode -c "mkdir -p /home/vscode/.local/share/fonts"
-su -l vscode -c "unzip ${WORKINGDIR}/fonts.zip -d /home/vscode/.local/share/fonts/"
-su -l vscode -c "fc-cache /home/vscode/.local/share/fonts"
+su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.local/share/fonts"
+su -l $_REMOTE_USER -c "unzip ${WORKINGDIR}/fonts.zip -d $_REMOTE_USER_HOME/.local/share/fonts/"
+su -l $_REMOTE_USER -c "fc-cache $_REMOTE_USER_HOME/.local/share/fonts"
 

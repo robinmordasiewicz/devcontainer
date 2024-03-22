@@ -2,11 +2,11 @@
 set -e
 
 WORKINGDIR=$(pwd)
-su -l vscode -c "source /opt/conda/etc/profile.d/conda.sh && /opt/conda/bin/conda env create -f ${WORKINGDIR}/environment.yml"
+su -l $_REMOTE_USER -c "source /opt/conda/etc/profile.d/conda.sh && /opt/conda/bin/conda env create -f ${WORKINGDIR}/environment.yml"
 
-su -l vscode -c "mkdir /home/vscode/.memgpt"
-su -l vscode -c "cp -a ${WORKINGDIR}/memgpt.conf /home/vscode/.memgpt/config"
-su -l vscode -c "cp -a ${WORKINGDIR}/initmemgpt.sql /tmp"
+su -l $_REMOTE_USER -c "mkdir $_REMOTE_USER_HOME/.memgpt"
+su -l $_REMOTE_USER -c "cp -a ${WORKINGDIR}/memgpt.conf $_REMOTE_USER_HOME/.memgpt/config"
+su -l $_REMOTE_USER -c "cp -a ${WORKINGDIR}/initmemgpt.sql /tmp"
 
 #sudo -H env PATH=$PATH git clone https://github.com/cpacker/MemGPT.git /tmp/MemGPT
 #cd /tmp/MemGPT

@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
-#su -l vscode -c "git clone --depth=1 https://github.com/tfutils/tfenv.git /home/vscode/.tfenv"
-su -l vscode -c "/home/vscode/.tfenv/bin/tfenv install"
-su -l vscode -c "/home/vscode/.tfenv/bin/tfenv use"
+su -l $_REMOTE_USER -c "git clone --depth=1 https://github.com/tfutils/tfenv.git $_REMOTE_USER_HOME/.tfenv"
+su -l $_REMOTE_USER -c "$_REMOTE_USER_HOME/.tfenv/bin/tfenv install"
+su -l $_REMOTE_USER -c "$_REMOTE_USER_HOME/.tfenv/bin/tfenv use"
+echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> $_REMOTE_USER_HOME/.bashrc
+chown $_REMOTE_USER:$_REMOTE_USER -R $_REMOTE_USER_HOME
+
