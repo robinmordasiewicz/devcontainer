@@ -33,4 +33,5 @@ su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.local/share/fonts"
 su -l $_REMOTE_USER -c "unzip ${WORKINGDIR}/fonts.zip -d $_REMOTE_USER_HOME/.local/share/fonts/"
 su -l $_REMOTE_USER -c "fc-cache $_REMOTE_USER_HOME/.local/share/fonts"
 chown -R $_REMOTE_USER:$_REMOTE_USER $_REMOTE_USER_HOME
+chown -R $_REMOTE_USER:$_REMOTE_USER /dc/
 
