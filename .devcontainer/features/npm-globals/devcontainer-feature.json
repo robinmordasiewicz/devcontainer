@@ -1,6 +1,6 @@
 {
     "id": "npm-global",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "name": "Node Gobal Packages",
     "description": "Installs node packages globally",
     "dependsOn": {

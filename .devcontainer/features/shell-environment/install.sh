@@ -21,8 +21,6 @@ su -l $_REMOTE_USER -c "git clone https://github.com/tmux-plugins/tpm $_REMOTE_U
 su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.config/powershell"
 su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1 -O $_REMOTE_USER_HOME/.config/powershell/Microsoft.PowerShell_profile.ps1"
 
-su -l $_REMOTE_USER -c "echo 'OCO_AI_PROVIDER=ollama' >$_REMOTE_USER_HOME/.opencommit"
-
 WORKINGDIR=$(pwd)
 
 DOWNLOADLOCATION=$(curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq -r '.assets[] | select(.name=="Meslo.zip").browser_download_url')

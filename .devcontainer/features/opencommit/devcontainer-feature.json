@@ -1,7 +1,7 @@
 {
   "name": "opencommit",
   "id": "opencommit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "opencommit using ollama",
   "installsAfter": [
     "ghcr.io/devcontainers/features/common-utils",
