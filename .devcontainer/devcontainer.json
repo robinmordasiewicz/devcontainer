@@ -96,7 +96,6 @@
     "ghcr.io/devcontainers-contrib/features/ffmpeg-apt-get:1": {},
     "ghcr.io/devcontainers-contrib/features/fzf:1": {},
     "ghcr.io/devcontainers-contrib/features/markdownlint-cli2:1": {},
-    "ghcr.io/devcontainers-contrib/features/npm-package:1": {},
     "ghcr.io/devcontainers-contrib/features/poppler-utils-apt-get:1": {},
     "ghcr.io/devcontainers-contrib/features/pylint:2": {},
     "ghcr.io/devcontainers-contrib/features/qrcode:2": {},

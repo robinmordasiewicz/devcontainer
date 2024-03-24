@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+set -ex
 
 directory="/tmp/opencommit"
 old_string="http://localhost:11434/api/chat"
@@ -18,8 +18,10 @@ do
     fi
 done
 
-nvm use node
-npm uninstall -g opencommit
-cd "${directory}" && npm install -g
+. "$NVM_DIR/nvm.sh" && ${NVM_BIN}/npm uninstall -g opencommit
+cd "${directory}"
+npm pack
+version=`jq -r .version package.json`
+cd "${directory}" && . "$NVM_DIR/nvm.sh" && ${NVM_BIN}/npm install opencommit-"${version}".tgz --no-save -g
 cd -
 rm -rf ${directory}

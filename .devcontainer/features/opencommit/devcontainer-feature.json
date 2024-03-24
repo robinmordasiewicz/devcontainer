@@ -1,11 +1,11 @@
 {
   "name": "opencommit",
   "id": "opencommit",
-  "version": "0.0.3",
+  "version": "0.0.9",
   "description": "opencommit using ollama",
   "installsAfter": [
     "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/devcontainers-contrib/features/npm-package"
+    "ghcr.io/devcontainers/features/node"
   ],
   "containerEnv": {
     "OCO_AI_PROVIDER": "ollama"
