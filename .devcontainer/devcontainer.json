@@ -140,5 +140,6 @@
 
   },
   "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "initializeCommand": "docker pull mcr.microsoft.com/devcontainers/base:ubuntu22.04:latest",
   "containerUser": "vscode"
 }
