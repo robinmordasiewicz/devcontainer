@@ -10,7 +10,6 @@
         "HashiCorp.terraform",
         "msazurermtools.azurerm-vscode-tools",
         "ms-azuretools.vscode-docker",
-        "ms-azuretools.vscode-azureterraform",
         "ms-azuretools.vscode-azurevirtualmachines",
         "ms-azuretools.vscode-bicep",
         "ms-azuretools.vscode-azureresourcegroups",
@@ -138,6 +137,6 @@
     "./features/update-conda": {},
     "./features/vimrc": {}
   },
-  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && sudo chown -R vscode:vscode /home/vscode",
+  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "containerUser": "vscode"
 }
