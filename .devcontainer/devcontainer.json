@@ -139,6 +139,6 @@
     "./features/opencommit": {}
 
   },
-  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "containerUser": "vscode"
 }
