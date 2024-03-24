@@ -3,7 +3,6 @@ dockerfile-language-server-nodejs
 gatsby-cli
 javascript-typescript-langserver
 jsonlint
-opencommit
 sql-language-server
 unified-language-server
 vscode-css-languageserver-bin
