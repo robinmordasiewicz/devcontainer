@@ -18,6 +18,7 @@ do
     fi
 done
 
+nvm use node
 npm uninstall -g opencommit
 cd "${directory}" && npm install -g
 cd -
