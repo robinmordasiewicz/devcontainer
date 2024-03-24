@@ -10,5 +10,5 @@
   "containerEnv": {
     "OCO_AI_PROVIDER": "ollama"
   },
-  "postStartCommand": "su vscode -c oco hook set"
+  "postStartCommand": "oco hook set || true"
 }
