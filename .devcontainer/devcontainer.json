@@ -139,6 +139,5 @@
     "./features/vimrc": {}
   },
   "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && sudo chown -R vscode:vscode /home/vscode",
-  "runArgs": ["--name", "${localEnv:USER}_devcontainer"],
   "containerUser": "vscode"
 }
