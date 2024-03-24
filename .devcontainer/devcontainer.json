@@ -135,7 +135,9 @@
     "./features/shell-environment": {},
     "./features/tfenv": {},
     "./features/update-conda": {},
-    "./features/vimrc": {}
+    "./features/vimrc": {},
+    "./features/opencommit": {}
+
   },
   "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "containerUser": "vscode"

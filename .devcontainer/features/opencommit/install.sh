@@ -1,24 +1,4 @@
 #!/bin/bash
-<<<<<<< HEAD
-set -e
-
-WORKINGDIR=$(pwd)
-
-echo "OCO_AI_PROVIDER=ollama" > ~/.opencommit
-oco hook set
-
-
-#REPODIR="$(pwd)"
-#if ! [ -d /tmp/opencommit ]; then
-#  git clone https://github.com/di-sukharev/opencommit.git /tmp/opencommit
-#else
-#  cd /tmp/opencommit || return
-#  git pull
-#fi
-#cd /tmp/opencommit &&  git apply ${REPODIR}/.devcontainer/opencommit-ollama.patch
-#sudo -H env PATH=$PATH npm install -g
-#cd ${REPODIR}
-=======
 #
 
 directory="/tmp/opencommit"
@@ -39,6 +19,3 @@ done
 
 npm uninstall -g opencommit
 cd "${directory}" && npm install -g
-
-#oco hook set
->>>>>>> 74309fa (update config)

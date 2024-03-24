@@ -4,15 +4,10 @@
   "version": "0.0.1",
   "description": "opencommit using ollama",
   "installsAfter": [
-<<<<<<< HEAD
-    "ghcr.io/devcontainers/features/common-utils",
-    "ghcr.io/rocker-org/devcontainer-features/miniforge",
-    "./features/update-conda"
-=======
     "ghcr.io/devcontainers/features/common-utils"
->>>>>>> 74309fa (update config)
   ],
   "containerEnv": {
     "OCO_AI_PROVIDER": "ollama"
-  }
+  },
+  "postStartCommand": "su vscode -c oco hook set"
 }
