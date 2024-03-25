@@ -1,5 +1,22 @@
 # devcontainer prebuild
 
+## Create devcontainer config
+
+```bash
+mkdir .devcontainer
+```
+
+### create the following file devcontainer.json inside the .devcontainer folder
+
+```json
+{
+  "name": "devops-toolkit",
+  "image": "docker.io/robinmordasiewicz/devcontainer:latest",
+  "initializeCommand": "docker pull robinmordasiewicz/devcontainer:latest",
+  "runArgs": ["--name", "devops-toolkit", "--hostname", "devops-toolkit"]
+}
+```
+
 ## VSCode Plugin
 
 https://code.visualstudio.com/docs/devcontainers/containers
