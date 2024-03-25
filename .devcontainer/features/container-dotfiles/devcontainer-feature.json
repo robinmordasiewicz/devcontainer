@@ -1,7 +1,7 @@
 {
     "name": "Container Dotfiles",
     "id": "container-dotfiles",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "Install shell shell rc files into container.",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
