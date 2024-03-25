@@ -12,6 +12,10 @@ su -l $_REMOTE_USER -c "echo 'eval \"\$(oh-my-posh init zsh --config ~/.oh-my-po
 su -l $_REMOTE_USER -c "echo 'eval \"\$(oh-my-posh init bash --config ~/.oh-my-posh/themes/powerlevel10k.omp.json)\"' >> $_REMOTE_USER_HOME/.bashrc"
 
 su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/Azure/azure-cli/dev/az.completion -O $_REMOTE_USER_HOME/.oh-my-zsh/custom/az.zsh"
+su -l $_REMOTE_USER -c "pwsh -Command Install-Module -Force -Name Terminal-Icons -Repository PSGallery -NonInteractive -NoProfile"
+su -l $_REMOTE_USER -c "pwsh -Command Install-Module -Force -Name z -Repository PSGallery -NonInteractive -NoProfile"
+
+su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/Azure/azure-cli/dev/az.completion -O $_REMOTE_USER_HOME/.oh-my-zsh/custom/az.zsh"
 
 su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/.tmux.conf -O $_REMOTE_USER_HOME/.tmux.conf"
 su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.tmux/plugins"
