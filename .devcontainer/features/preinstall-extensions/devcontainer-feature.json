@@ -1,0 +1,9 @@
+{
+    "name": "Preinstall Extensions",
+    "id": "preinstall-extensions",
+    "version": "0.0.1",
+    "description": "Preinstall VSCode Extensions",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

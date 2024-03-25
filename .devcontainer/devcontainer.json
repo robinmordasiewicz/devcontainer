@@ -136,7 +136,8 @@
     "./features/nerd-fonts": {},
     "./features/update-conda": {},
     "./features/vimrc": {},
-    "./features/opencommit": {}
+    "./features/opencommit": {},
+    "./features/preinstall-extensions": {}
 
   },
   "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
