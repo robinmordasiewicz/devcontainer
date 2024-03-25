@@ -8,12 +8,14 @@ mkdir .devcontainer
 
 ### create the following file devcontainer.json inside the .devcontainer folder
 
+* replace <my-github-repo-name> with your github repo name
+
 ```json
 {
   "name": "devops-toolkit",
   "image": "docker.io/robinmordasiewicz/devcontainer:latest",
   "initializeCommand": "docker pull robinmordasiewicz/devcontainer:latest",
-  "runArgs": ["--name", "devops-toolkit", "--hostname", "devops-toolkit"]
+  "runArgs": ["--name", "<my-github-repo-name>", "--hostname", "<my-github-repo-name>"]
 }
 ```
 
