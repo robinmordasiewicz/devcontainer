@@ -1,7 +1,7 @@
 {
     "name": "Update Conda",
     "id": "update-conda",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Update Conda and initialize shell",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
