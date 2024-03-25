@@ -17,5 +17,3 @@ su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/robinmordasiewicz
 su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.tmux/plugins"
 su -l $_REMOTE_USER -c "git clone https://github.com/tmux-plugins/tpm $_REMOTE_USER_HOME/.tmux/plugins/tpm"
 
-su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.config/powershell"
-su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1 -O $_REMOTE_USER_HOME/.config/powershell/Microsoft.PowerShell_profile.ps1"
