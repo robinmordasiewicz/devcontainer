@@ -15,8 +15,9 @@ set -e
 # 
 # IMPORTANT: requires jq and curl to be installed
 
-vscode_commit_sha=$1
-devcontainer_path=$2
+vscode_commit_sha="863d2581ecda6849923a2118d93a088b0745d9d6"
+exit 0
+devcontainer_path=
 
 # Install vscode
 ARCH="x64"
