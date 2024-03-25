@@ -131,8 +131,9 @@
     "./features/lsd": {},
     "./features/mkdocs-environment": {},
     "./features/setup": {},
-    "./features/shell-environment": {},
+    "./features/container-dotfiles": {},
     "./features/tfenv": {},
+    "./features/nerd-fonts": {},
     "./features/update-conda": {},
     "./features/vimrc": {},
     "./features/opencommit": {}
