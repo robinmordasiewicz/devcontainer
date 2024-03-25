@@ -1,4 +1,4 @@
-# devcontainer prebuilt image
+# devcontainer prebuild
 
 ## VSCode Plugin
 
