@@ -3,28 +3,6 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu22.04",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "esbenp.prettier-vscode",
-        "github.vscode-github-actions",
-        "GitHub.vscode-pull-request-github",
-        "HashiCorp.terraform",
-        "msazurermtools.azurerm-vscode-tools",
-        "ms-azuretools.vscode-docker",
-        "ms-azuretools.vscode-azurevirtualmachines",
-        "ms-azuretools.vscode-bicep",
-        "ms-azuretools.vscode-azureresourcegroups",
-        "ms-azuretools.vscode-azurestorage",
-        "ms-azuretools.vscode-cosmosdb",
-        "ms-azuretools.vscode-azureappservice",
-        "MS-CST-E.vscode-devskim",
-        "ms-python.python",
-        "ms-toolsai.vscode-ai",
-        "ms-vscode.azure-account",
-        "ms-vscode.azurecli",
-        "mhutchie.git-graph",
-        "OmarTawfik.github-actions-vscode",
-        "tomoyukim.vscode-mermaid-editor"
-      ],
       "settings": {
         "terminal.integrated.profiles.linux": {
           "bash": {
@@ -91,7 +69,8 @@
         "autoconf",
         "tesseract-ocr",
         "ubuntu-drivers-common",
-        "bash-completion"
+        "bash-completion",
+        "file"
       ]
     },
     "ghcr.io/devcontainers-contrib/features/black:2": {},
@@ -142,7 +121,37 @@
     "./features/vimrc": {},
     "./features/opencommit": {},
     "./features/preinstall-extensions": {
-      "VSCODE_VERSION": "863d2581ecda6849923a2118d93a088b0745d9d6"
+      "extensions": [
+        "alexcvzz.vscode-sqlite",
+        "amazonwebservices.aws-toolkit-vscode",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "github.vscode-github-actions",
+        "gitHub.vscode-pull-request-github",
+        "hashicorp.terraform",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-azureappservice",
+        "ms-azuretools.vscode-azureresourcegroups",
+        "ms-azuretools.vscode-azurestorage",
+        "ms-azuretools.vscode-azurevirtualmachines",
+        "ms-azuretools.vscode-bicep",
+        "ms-azuretools.vscode-cosmosdb",
+        "ms-azuretools.vscode-docker",
+        "ms-cst-e.vscode-devskim",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.vscode-ai",
+        "ms-toolsai.vscode-ai-remote",
+        "ms-vscode.azure-account",
+        "ms-vscode.azurecli",
+        "ms-vscode.powershell",
+        "msazurermtools.azurerm-vscode-tools",
+        "omartawfik.github-actions-vscode",
+        "timonwong.shellcheck",
+        "tomoyukim.vscode-mermaid-editor"
+      ]
     }
   },
   "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
