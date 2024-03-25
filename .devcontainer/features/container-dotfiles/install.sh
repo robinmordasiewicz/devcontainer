@@ -12,8 +12,8 @@ su -l $_REMOTE_USER -c "echo 'eval \"\$(oh-my-posh init zsh --config ~/.oh-my-po
 su -l $_REMOTE_USER -c "echo 'eval \"\$(oh-my-posh init bash --config ~/.oh-my-posh/themes/powerlevel10k.omp.json)\"' >> $_REMOTE_USER_HOME/.bashrc"
 
 su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/Azure/azure-cli/dev/az.completion -O $_REMOTE_USER_HOME/.oh-my-zsh/custom/az.zsh"
-su -l $_REMOTE_USER -c "pwsh -Command Install-Module -Force -Name Terminal-Icons -Repository PSGallery"
-su -l $_REMOTE_USER -c "pwsh -Command Install-Module -Force -Name z -Repository PSGallery"
+su -l $_REMOTE_USER -c "pwsh -NoProfile -NonInteractive -Command Install-Module -Force -Name Terminal-Icons -Repository PSGallery"
+su -l $_REMOTE_USER -c "pwsh -NoProfile -NonInteractive -Command Install-Module -Force -Name z -Repository PSGallery"
 
 su -l $_REMOTE_USER -c "wget https://raw.githubusercontent.com/Azure/azure-cli/dev/az.completion -O $_REMOTE_USER_HOME/.oh-my-zsh/custom/az.zsh"
 
