@@ -6,45 +6,43 @@ set -e
 # ARG VSCODE_VERSION=2ccd690cbff1569e4a83d7c43d45101f817401dc
 # RUN bash .devcontainer/preinstall-vscode-extensions.sh $VSCODE_VERSION /app/.devcontainer/devcontainer.json
 # 
-# Preinstall vscode server extensions.
-# Uses vscode of provided version (git commit hash) to download extensions inside container
-# and deletes installed vscode server. It does it because user's vscode can be a different version,
-# so after container start it will install itself inside container, and the container will have
-# two different versions of vscode server, and it's bad in terms storage and conflicts.
-# Extensions to install are extracted from devcontainer.json file
-# 
-# IMPORTANT: requires jq and curl to be installed
+#Version: 1.87.2
+#Commit: 863d2581ecda6849923a2118d93a088b0745d9d6
+#Date: 2024-03-08T15:14:59.643Z
+#Electron: 27.3.2
+#ElectronBuildId: 26836302
+#Chromium: 118.0.5993.159
+#Node.js: 18.17.1
+#V8: 11.8.172.18-electron.0
+#OS: Linux x64 6.5.0-25-generic
+
 
 vscode_commit_sha="863d2581ecda6849923a2118d93a088b0745d9d6"
-exit 0
-devcontainer_path=
+devcontainer_path="https://raw.githubusercontent.com/robinmordasiewicz/devcontainer/main/.devcontainer/devcontainer.json"
+curl -s -L "${devcontainer_path}" -o "/tmp/devcontainer.json"
 
-# Install vscode
 ARCH="x64"
 U_NAME=$(uname -m)
 if [ "${U_NAME}" = "aarch64" ]; then
     ARCH="arm64"
 fi
+
 archive="vscode-server-linux-${ARCH}.tar.gz"
 vscode_dir="~/.vscode-server/bin/${vscode_commit_sha}"
-echo "will attempt to download VS Code Server version = '${vscode_commit_sha}'"
-# Download VS Code Server tarball to tmp directory.
-curl -L "https://update.code.visualstudio.com/commit:${vscode_commit_sha}/server-linux-${ARCH}/stable" -o "/tmp/${archive}"
-# Make the parent directory where the server should live.
-# NOTE: Ensure VS Code will have read/write access; namely the user running VScode or container user.
-mkdir -vp "$vscode_dir"
-# Extract the tarball to the right location.
-tar --no-same-owner -xzv --strip-components=1 -C "$vscode_dir" -f "/tmp/${archive}"
 
-# Install extensions from .devcontainer.json
-# Exclude comments lines to make file a valid JSON
-extensions_list=$(cat "$devcontainer_path" | grep -vE "\s*//" | jq ".customizations.vscode.extensions[]" -r)
-for extension in "${extensions_list[@]}"; do 
-    "$vscode_dir/bin/code-server" --install-extension $extension; 
+echo "will attempt to download VS Code Server version = '${vscode_commit_sha}'"
+curl -s -L "https://update.code.visualstudio.com/commit:${vscode_commit_sha}/server-linux-${ARCH}/stable" -o "/tmp/${archive}"
+
+mkdir -vp "$vscode_dir"
+tar --no-same-owner -xz --strip-components=1 -C "$vscode_dir" -f "/tmp/${archive}"
+
+extensions=$(jq -r '.customizations.vscode.extensions | .[]' /tmp/devcontainer.json)
+
+for ext in $extensions; do
+    "$vscode_dir/bin/code-server" --install-extension $ext;
 done
 
-# Cleanup
 rm -rd "$vscode_dir"
 rm "/tmp/${archive}"
+rm /tmp/devcontainer.json
 
-echo "Done!"

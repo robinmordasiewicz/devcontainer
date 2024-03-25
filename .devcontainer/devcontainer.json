@@ -23,8 +23,7 @@
         "ms-vscode.azurecli",
         "mhutchie.git-graph",
         "OmarTawfik.github-actions-vscode",
-        "tomoyukim.vscode-mermaid-editor",
-        "undefined_publisher.fortidevsec"
+        "tomoyukim.vscode-mermaid-editor"
       ],
       "settings": {
         "terminal.integrated.profiles.linux": {
@@ -39,7 +38,12 @@
           },
           "tmux": {
             "path": "/usr/bin/tmux",
-            "args": ["new-session", "-A", "-s", "vscode:${workspaceFolder}"]
+            "args": [
+              "new-session",
+              "-A",
+              "-s",
+              "vscode:${workspaceFolder}"
+            ]
           }
         },
         "terminal.integrated.defaultProfile.linux": "zsh",
@@ -140,10 +144,14 @@
     "./features/preinstall-extensions": {
       "VSCODE_VERSION": "863d2581ecda6849923a2118d93a088b0745d9d6"
     }
-
   },
   "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "initializeCommand": "docker pull mcr.microsoft.com/devcontainers/base:ubuntu22.04",
-  "runArgs": ["--name", "devcontainer", "--hostname", "devcontainer"],
+  "runArgs": [
+    "--name",
+    "devcontainer",
+    "--hostname",
+    "devcontainer"
+  ],
   "containerUser": "vscode"
 }
