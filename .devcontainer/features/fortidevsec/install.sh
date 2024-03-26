@@ -2,8 +2,8 @@
 set -e
 
 VSIXVERSION=$(jq -r '.version' devcontainer-feature.json)
-VSIXVENDOR=$(jq -r '.name' devcontainer-feature.json)
-PACKAGE="${VSIXVENDOR}-v${VSIXVERSION}.vsix"
+VSIXVENDOR=$(jq -r '.id' devcontainer-feature.json)
+PACKAGE="$(pwd)/${VSIXVENDOR}-v${VSIXVERSION}.vsix"
 
 get_latest_release() {
     tag=$(curl --silent "https://api.github.com/repos/${1}/releases/latest" | # Get latest release from GitHub API
