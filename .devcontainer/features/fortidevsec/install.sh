@@ -1,7 +1,9 @@
 #!/bin/env bash
 set -e
 
-EXTENSIONS=${EXTENSIONS:-undefined}
+VSIXVERSION=$(jq -r '.version' devcontainer-feature.json)
+VSIXVENDOR=$(jq -r '.name' devcontainer-feature.json)
+PACKAGE="${VSIXVENDOR}-v${VSIXVERSION}.vsix"
 
 get_latest_release() {
     tag=$(curl --silent "https://api.github.com/repos/${1}/releases/latest" | # Get latest release from GitHub API
@@ -57,11 +59,7 @@ if [ ! -d  $_REMOTE_USER_HOME/.vscode-server/extensions ]; then
     su -l $_REMOTE_USER -c "mkdir -p $_REMOTE_USER_HOME/.vscode-server/extensions"
 fi
 
-IFS=',' read -ra EXTENSIONS_ARRAY <<< "$EXTENSIONS"
-
-for ext in "${EXTENSIONS_ARRAY[@]}"; do
-    su -l $_REMOTE_USER -c "$vscode_dir/bin/code-server --install-extension $ext --extensions-dir $_REMOTE_USER_HOME/.vscode-server/extensions"
-done
+su -l $_REMOTE_USER -c "$vscode_dir/bin/code-server --install-extension ${PACKAGE} --extensions-dir $_REMOTE_USER_HOME/.vscode-server/extensions"
 
 rm -rd "$vscode_dir"
 rm "/tmp/${archive}"
