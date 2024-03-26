@@ -40,12 +40,13 @@
     "ghcr.io/devcontainers/features/aws-cli:1": {},
     "ghcr.io/devcontainers/features/azure-cli:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {
-      "configureZshAsDefaultShell": true
+      "configureZshAsDefaultShell": true,
+      "nonFreePackages": "true"
     },
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/powershell:1": {
-      "modules": "Terminal-Icons z",
+      "modules": "Terminal-Icons,z",
       "powershellProfileURL": "https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1"
     },
     "ghcr.io/devcontainers/features/node:1": {},

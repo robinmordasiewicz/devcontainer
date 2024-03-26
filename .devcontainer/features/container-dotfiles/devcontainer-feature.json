@@ -1,7 +1,7 @@
 {
     "name": "Container Dotfiles",
     "id": "container-dotfiles",
-    "version": "0.0.12",
+    "version": "0.0.19",
     "description": "Install shell shell rc files into container.",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
@@ -11,8 +11,10 @@
         "ghcr.io/devcontainers-contrib/features/zsh-plugins",
         "ghcr.io/devcontainers/features/powershell",
         "ghcr.io/devcontainers-contrib/features/tmux-apt-get",
+        "ghcr.io/rocker-org/devcontainer-features/miniforge",
         "./features/setup",
+        "./features/azure-cli-persistence",
         "./features/lsd"
     ],
-    "postStartCommand": "yes y | az config set auto-upgrade.enable=yes && yes y | az config set auto-upgrade.prompt=no"
+    "onCreateCommand": "yes y | az config set auto-upgrade.enable=yes && yes y | az config set auto-upgrade.prompt=no && az bicep install"
 }
