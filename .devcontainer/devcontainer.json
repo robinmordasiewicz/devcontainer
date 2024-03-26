@@ -120,6 +120,7 @@
     "./features/update-conda": {},
     "./features/vimrc": {},
     "./features/opencommit": {},
+    "./features/fortidevsec": {},
     "./features/preinstall-extensions": {
       "extensions": [
         "alexcvzz.vscode-sqlite",

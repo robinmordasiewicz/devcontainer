@@ -1,0 +1,9 @@
+{
+    "name": "FortiDevSec Extension",
+    "id": "fortidevsec",
+    "version": "23.4.107",
+    "description": "Find and fix all types of application security issues within your DevOps CI/CD cycle using FortiDevSec, a comprehensive SaaS-based tool for software developers and DevOps.",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
