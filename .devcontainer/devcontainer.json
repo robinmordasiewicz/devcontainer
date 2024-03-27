@@ -152,6 +152,7 @@
         "ms-vscode.azurecli",
         "ms-vscode.powershell",
         "msazurermtools.azurerm-vscode-tools",
+        "nhoizey.gremlins",
         "omartawfik.github-actions-vscode",
         "timonwong.shellcheck",
         "tomoyukim.vscode-mermaid-editor"

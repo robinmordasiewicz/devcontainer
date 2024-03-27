@@ -5,7 +5,7 @@
     "description": "Install nerd fonts.",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
-        "ghcr.io/devcontainers-contrib/features/wget-apt-get",
+        "ghcr.io/devcontainers-contrib/features/curl-apt-get",
         "./features/setup"
     ]
 }

@@ -1,7 +1,7 @@
 {
     "name": "ls Deluxe",
     "id": "lazygit",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "ls deluxe (lsd) adds fancy color output, replacing legacy ls",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
