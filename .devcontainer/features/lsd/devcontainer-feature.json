@@ -1,8 +1,8 @@
 {
-    "name": "lsd",
+    "name": "ls deluxe",
     "id": "lsd",
     "version": "0.0.2",
-    "description": "Install lsd - ls (Delux)",
+    "description": "Install lsd - ls (Deluxe)",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers-contrib/features/curl-apt-get"
