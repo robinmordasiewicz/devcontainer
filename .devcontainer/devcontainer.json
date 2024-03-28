@@ -52,6 +52,8 @@
       "modules": "Terminal-Icons,z",
       "powershellProfileURL": "https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1"
     },
+    "ghcr.io/natescherer/devcontainers-custom-features/powershell-resources:1": {
+    },
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/devcontainers/features/python:1": {
       "installTools": true,
@@ -159,7 +161,7 @@
       ]
     }
   },
-  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "initializeCommand": "docker pull mcr.microsoft.com/devcontainers/base:ubuntu22.04",
   "runArgs": [
     "--name",
