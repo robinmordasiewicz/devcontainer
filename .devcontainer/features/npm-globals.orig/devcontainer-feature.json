@@ -1,0 +1,9 @@
+{
+    "id": "npm-global",
+    "version": "0.0.3",
+    "name": "Node Gobal Packages",
+    "description": "Installs node packages globally",
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/node": {}
+    }
+}

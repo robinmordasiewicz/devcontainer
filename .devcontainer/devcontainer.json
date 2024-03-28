@@ -52,8 +52,6 @@
       "modules": "Terminal-Icons,z",
       "powershellProfileURL": "https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1"
     },
-    "ghcr.io/natescherer/devcontainers-custom-features/powershell-resources:1": {
-    },
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/devcontainers/features/python:1": {
       "installTools": true,
@@ -120,12 +118,37 @@
     "./features/mkdocs-environment": {},
     "./features/setup": {},
     "./features/container-dotfiles": {},
+    "./features/oh-my-posh": {},
     "./features/tfenv": {},
     "./features/nerd-fonts": {},
     "./features/update-conda": {},
     "./features/vimrc": {},
     "./features/opencommit": {},
     "./features/fortidevsec": {},
+    "./features/powershell-modules": {
+      "extensions": [
+        "z",
+        "Terminal-Icons",
+        "Az",
+        "PowerShellAI"
+      ]
+    },
+    "./features/npm-globals": {
+      "extensions": [
+"bash-language-server",
+"dockerfile-language-server-nodejs",
+"gatsby-cli",
+"javascript-typescript-langserver",
+"jsonlint",
+"newman",
+"sql-language-server",
+"unified-language-server",
+"vscode-css-languageserver-bin",
+"vscode-html-languageserver-bin",
+"vscode-json-languageserver-bin",
+"yaml-language-server"
+      ]
+    },
     "./features/preinstall-extensions": {
       "extensions": [
         "alexcvzz.vscode-sqlite",
@@ -156,6 +179,7 @@
         "msazurermtools.azurerm-vscode-tools",
         "nhoizey.gremlins",
         "omartawfik.github-actions-vscode",
+        "postman.postman-for-vscode",
         "timonwong.shellcheck",
         "tomoyukim.vscode-mermaid-editor"
       ]

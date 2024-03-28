@@ -7,7 +7,12 @@
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers-contrib/features/curl-apt-get",
         "ghcr.io/devcontainers-contrib/features/zsh-plugins",
-        "ghcr.io/rocker-org/devcontainer-features/miniforge"
+        "ghcr.io/rocker-org/devcontainer-features/miniforge",
+        "ghcr.io/joshuanianji/devcontainer-features/aws-cli-persistence",
+        "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence",
+        "ghcr.io/joshuanianji/devcontainer-features/terraform-cli-persistence",
+        "./features/azure-cli-persistence",
+        "./features/oh-my-posh"
     ],
     "onCreateCommand": "yes y | az config set auto-upgrade.enable=yes && yes y | az config set auto-upgrade.prompt=no && mkdir -p ~/.azure/bin || continue && ln -s /usr/local/bin/bicep ~/.azure/bin/bicep || continue"
 }

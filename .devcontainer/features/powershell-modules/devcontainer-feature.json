@@ -1,8 +1,8 @@
 {
-    "name": "NPM Global Modules",
-    "id": "npm-globals",
-    "version": "0.0.1",
-    "description": "Install node modules global",
+    "name": "PowerShell Modules",
+    "id": "powershell-modules",
+    "version": "0.0.2",
+    "description": "Install powershell modules",
     "options": {
         "extensions": {
             "type": "string",
@@ -13,11 +13,14 @@
                 "ms-vscode.powershell"
             ],
             "default": "",
-            "description": "Supply a list of pre-installed node modules"
+            "description": "Supply a list of pre-installed powershell modules"
         }
     },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
-        "ghcr.io/devcontainers/features/node"
+        "ghcr.io/devcontainers-contrib/features/curl-apt-get",
+        "./features/container-dotfiles",
+        "./features/tfenv",
+        "ghcr.io/devcontainers/features/powershell"
     ]
 }
