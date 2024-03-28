@@ -153,6 +153,7 @@
       "extensions": [
         "alexcvzz.vscode-sqlite",
         "amazonwebservices.aws-toolkit-vscode",
+        "continue.continue",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "github.vscode-github-actions",
