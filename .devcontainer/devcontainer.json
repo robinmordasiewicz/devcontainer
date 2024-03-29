@@ -90,7 +90,7 @@
     "ghcr.io/devcontainers/features/github-cli": {},
     "ghcr.io/devcontainers/features/node": {},
     "ghcr.io/devcontainers/features/powershell": {
-      "modules": "Terminal-Icons,z",
+      "modules": "Terminal-Icons,z,PowerShellAI",
       "powershellProfileURL": "https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1"
     },
     "ghcr.io/devcontainers/features/python": {
@@ -138,7 +138,6 @@
       "extensions": [
         "z",
         "Terminal-Icons",
-        "Az",
         "PowerShellAI"
       ]
     },
