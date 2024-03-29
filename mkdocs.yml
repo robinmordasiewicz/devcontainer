@@ -3,7 +3,7 @@ site_name: devcontainer
 site_description: >-
   DevContainer Template Repository
 site_url: https://robinmordasiewicz.github.io/devcontainer/
-site_author: 
+site_author:
 docs_dir: docs
 site_dir: site
 

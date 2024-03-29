@@ -118,4 +118,3 @@ devcontainer build --workspace-folder . --platform linux/arm64,linux/amd64 --ima
 docker login
 docker push robinmordasiewicz/devcontainer:latest
 ```
-
