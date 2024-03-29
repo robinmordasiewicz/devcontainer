@@ -37,30 +37,30 @@
     }
   },
   "features": {
-    "ghcr.io/devcontainers/features/aws-cli:1": {},
-    "ghcr.io/devcontainers/features/azure-cli:1": {
+    "ghcr.io/devcontainers/features/aws-cli": {},
+    "ghcr.io/devcontainers/features/azure-cli": {
       "extensions": "account,interactive",
       "installBicep": "true"
     },
-    "ghcr.io/devcontainers/features/common-utils:2": {
+    "ghcr.io/devcontainers/features/common-utils": {
       "configureZshAsDefaultShell": true,
       "nonFreePackages": "true"
     },
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker": {},
+    "ghcr.io/devcontainers/features/github-cli": {},
     "ghcr.io/devcontainers/features/powershell": {
       "modules": "Terminal-Icons,z",
       "powershellProfileURL": "https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1"
     },
-    "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/devcontainers/features/python:1": {
+    "ghcr.io/devcontainers/features/node": {},
+    "ghcr.io/devcontainers/features/python": {
       "installTools": true,
       "version": "3.11"
     },
-    "ghcr.io/devcontainers-contrib/features/act:1": {},
-    "ghcr.io/devcontainers-contrib/features/actionlint:1": {},
-    "ghcr.io/devcontainers-contrib/features/ansible:2": {},
-    "ghcr.io/devcontainers-contrib/features/apt-packages:1": {
+    "ghcr.io/devcontainers-contrib/features/act": {},
+    "ghcr.io/devcontainers-contrib/features/actionlint": {},
+    "ghcr.io/devcontainers-contrib/features/ansible": {},
+    "ghcr.io/devcontainers-contrib/features/apt-packages": {
       "packages": [
         "software-properties-common",
         "iputils-ping",
@@ -77,54 +77,54 @@
         "file"
       ]
     },
-    "ghcr.io/devcontainers-contrib/features/black:2": {},
-    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
-    "ghcr.io/devcontainers-contrib/features/devcontainers-cli:1": {},
-    "ghcr.io/devcontainers-contrib/features/ffmpeg-apt-get:1": {},
-    "ghcr.io/devcontainers-contrib/features/fzf:1": {},
-    "ghcr.io/devcontainers-contrib/features/markdownlint-cli2:1": {},
-    "ghcr.io/devcontainers-contrib/features/poppler-utils-apt-get:1": {},
+    "ghcr.io/devcontainers-contrib/features/black": {},
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get": {},
+    "ghcr.io/devcontainers-contrib/features/devcontainers-cli": {},
+    "ghcr.io/devcontainers-contrib/features/ffmpeg-apt-get": {},
+    "ghcr.io/devcontainers-contrib/features/fzf": {},
+    "ghcr.io/devcontainers-contrib/features/markdownlint-cli2": {},
+    "ghcr.io/devcontainers-contrib/features/poppler-utils-apt-get": {},
     "ghcr.io/devcontainers-contrib/features/pylint:2": {},
     "ghcr.io/devcontainers-contrib/features/qrcode:2": {},
-    "ghcr.io/devcontainers-contrib/features/terraform-docs:1": {},
-    "ghcr.io/devcontainers-contrib/features/tmux-apt-get:1": {},
-    "ghcr.io/devcontainers-contrib/features/vscode-cli:1": {},
-    "ghcr.io/devcontainers-contrib/features/vscode-server:1": {},
-    "ghcr.io/devcontainers-contrib/features/wget-apt-get:1": {},
+    "ghcr.io/devcontainers-contrib/features/terraform-docs": {},
+    "ghcr.io/devcontainers-contrib/features/tmux-apt-get": {},
+    "ghcr.io/devcontainers-contrib/features/vscode-cli": {},
+    "ghcr.io/devcontainers-contrib/features/vscode-server": {},
+    "ghcr.io/devcontainers-contrib/features/wget-apt-get": {},
     "ghcr.io/devcontainers-contrib/features/yamllint:2": {},
     "ghcr.io/devcontainers-contrib/features/yt-dlp:2": {},
-    "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+    "ghcr.io/devcontainers-contrib/features/zsh-plugins": {
       "plugins": "zsh-syntax-highlighting zsh-autosuggestions ubuntu jsontools gh common-aliases zsh-aliases-lsd zsh-tfenv conda-zsh-completion z pip",
       "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions.git https://github.com/zsh-users/zsh-syntax-highlighting.git https://github.com/conda-incubator/conda-zsh-completion.git https://github.com/z-shell/zsh-eza.git https://github.com/cda0/zsh-tfenv.git https://github.com/yuhonas/zsh-aliases-lsd.git"
     },
-    "ghcr.io/devcontainers-community/npm-features/prettier:1": {},
-    "ghcr.io/dhoeric/features/tfsec:1": {},
-    "ghcr.io/guiyomh/features/vim:0": {},
+    "ghcr.io/devcontainers-community/npm-features/prettier": {},
+    "ghcr.io/dhoeric/features/tfsec": {},
+    "ghcr.io/guiyomh/features/vim": {},
     "ghcr.io/hwaien/devcontainer-features/match-host-time-zone": {},
-    "ghcr.io/joshuanianji/devcontainer-features/aws-cli-persistence:1": {},
-    "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence:1": {},
-    "ghcr.io/joshuanianji/devcontainer-features/terraform-cli-persistence:1": {},
-    "ghcr.io/jsburckhardt/devcontainer-features/gitleaks:1": {},
-    "ghcr.io/jungaretti/features/make:1": {},
-    "ghcr.io/lukewiwa/features/shellcheck:0": {},
-    "ghcr.io/prulloac/devcontainer-features/pre-commit:1": {},
-    "ghcr.io/prulloac/devcontainer-features/gitlint:1": {},
-    "ghcr.io/rocker-org/devcontainer-features/miniforge:1": {},
-    "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
-    "ghcr.io/warrenbuckley/codespace-features/sqlite:1": {},
-    "ghcr.io/robinmordasiewicz/features/azure-cli-persistence:0": {},
-    "ghcr.io/robinmordasiewicz/features/lazygit:0": {},
-    "ghcr.io/robinmordasiewicz/features/lsd:0": {},
-    "ghcr.io/robinmordasiewicz/features/mkdocs-environment:0": {},
-    "ghcr.io/robinmordasiewicz/features/setup:0": {},
-    "ghcr.io/robinmordasiewicz/features/container-dotfiles:0": {},
-    "ghcr.io/robinmordasiewicz/features/oh-my-posh:0": {},
-    "ghcr.io/robinmordasiewicz/features/nerd-fonts:0": {},
-    "ghcr.io/robinmordasiewicz/features/update-conda:0": {},
-    "ghcr.io/robinmordasiewicz/features/vimrc:0": {},
-    "ghcr.io/robinmordasiewicz/features/opencommit:0": {},
+    "ghcr.io/joshuanianji/devcontainer-features/aws-cli-persistence": {},
+    "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence": {},
+    "ghcr.io/joshuanianji/devcontainer-features/terraform-cli-persistence": {},
+    "ghcr.io/jsburckhardt/devcontainer-features/gitleaks": {},
+    "ghcr.io/jungaretti/features/make": {},
+    "ghcr.io/lukewiwa/features/shellcheck": {},
+    "ghcr.io/prulloac/devcontainer-features/pre-commit": {},
+    "ghcr.io/prulloac/devcontainer-features/gitlint": {},
+    "ghcr.io/rocker-org/devcontainer-features/miniforge": {},
+    "ghcr.io/stuartleeks/dev-container-features/shell-history": {},
+    "ghcr.io/warrenbuckley/codespace-features/sqlite": {},
+    "ghcr.io/robinmordasiewicz/features/azure-cli-persistence": {},
+    "ghcr.io/robinmordasiewicz/features/lazygit": {},
+    "ghcr.io/robinmordasiewicz/features/lsd": {},
+    "ghcr.io/robinmordasiewicz/features/mkdocs-environment": {},
+    "ghcr.io/robinmordasiewicz/features/setup": {},
+    "ghcr.io/robinmordasiewicz/features/container-dotfiles": {},
+    "ghcr.io/robinmordasiewicz/features/oh-my-posh": {},
+    "ghcr.io/robinmordasiewicz/features/nerd-fonts": {},
+    "ghcr.io/robinmordasiewicz/features/update-conda": {},
+    "ghcr.io/robinmordasiewicz/features/vimrc": {},
+    "ghcr.io/robinmordasiewicz/features/opencommit": {},
     "ghcr.io/robinmordasiewicz/features/fortidevsec:latest": {},
-    "ghcr.io/robinmordasiewicz/features/powershell-modules:0": {
+    "ghcr.io/robinmordasiewicz/features/powershell-modules": {
       "extensions": [
         "z",
         "Terminal-Icons",
@@ -132,7 +132,7 @@
         "PowerShellAI"
       ]
     },
-    "ghcr.io/robinmordasiewicz/features/npm-globals:0": {
+    "ghcr.io/robinmordasiewicz/features/npm-globals": {
       "extensions": [
         "bash-language-server",
         "dockerfile-language-server-nodejs",
@@ -148,7 +148,7 @@
         "yaml-language-server"
       ]
     },
-    "ghcr.io/robinmordasiewicz/features/preinstall-extensions:0": {
+    "ghcr.io/robinmordasiewicz/features/preinstall-extensions": {
       "extensions": [
         "alexcvzz.vscode-sqlite",
         "amazonwebservices.aws-toolkit-vscode",
@@ -188,10 +188,8 @@
   "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "initializeCommand": "docker pull mcr.microsoft.com/devcontainers/base:ubuntu22.04",
   "runArgs": [
-    "--name",
-    "devcontainer",
-    "--hostname",
-    "devcontainer"
+    "--name=devcontainer",
+    "--hostname=devcontainer"
   ],
   "containerUser": "vscode"
 }
