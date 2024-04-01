@@ -90,7 +90,6 @@
     "ghcr.io/devcontainers/features/github-cli": {},
     "ghcr.io/devcontainers/features/node": {},
     "ghcr.io/devcontainers/features/powershell": {
-      "modules": "Terminal-Icons,z,PowerShellAI",
       "powershellProfileURL": "https://raw.githubusercontent.com/robinmordasiewicz/dotfiles/main/Microsoft.PowerShell_profile.ps1"
     },
     "ghcr.io/devcontainers/features/python": {
@@ -100,7 +99,6 @@
     "ghcr.io/dhoeric/features/tfsec": {},
     "ghcr.io/guiyomh/features/vim": {},
     "ghcr.io/hwaien/devcontainer-features/match-host-time-zone": {},
-    "ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools": {},
     "ghcr.io/joshuanianji/devcontainer-features/aws-cli-persistence": {},
     "ghcr.io/joshuanianji/devcontainer-features/github-cli-persistence": {},
     "ghcr.io/joshuanianji/devcontainer-features/terraform-cli-persistence": {},
@@ -135,11 +133,7 @@
     "ghcr.io/robinmordasiewicz/features/oh-my-posh": {},
     "ghcr.io/robinmordasiewicz/features/opencommit": {},
     "ghcr.io/robinmordasiewicz/features/powershell-modules": {
-      "extensions": [
-        "z",
-        "Terminal-Icons",
-        "PowerShellAI"
-      ]
+      "modules": "Terminal-Icons,z,PowerShellAI"
     },
     "ghcr.io/robinmordasiewicz/features/preinstall-extensions": {
       "extensions": [
@@ -178,7 +172,6 @@
         "tomoyukim.vscode-mermaid-editor"
       ]
     },
-    "ghcr.io/robinmordasiewicz/features/setup": {},
     "ghcr.io/robinmordasiewicz/features/update-conda": {},
     "ghcr.io/robinmordasiewicz/features/vimrc": {},
     "ghcr.io/rocker-org/devcontainer-features/miniforge": {},
